@@ -1,0 +1,37 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  background: aliceblue;
+}
+
+.sub-container {
+  margin-top: 10%;
+  border-radius: 4px;
+  width: 70%;
+}
+
+.step-left {
+  margin-left: 15%;
+}
+
+.header {
+  margin-top: 50px;
+  padding: 0 10px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: white;
+  margin-right: 50px;
+  background: rgba(131, 90, 196, 0.4);
+}
+
+.datetime {
+  margin-top: 10px;
+  font-size: 1.02rem;
+  color: lightgrey;
+  padding: 0 10px;
+  background: rgba(131, 90, 196, 0.4);
+}
+
+.actions {
+  margin-top: 25px;
+}

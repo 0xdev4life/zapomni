@@ -1,0 +1,11 @@
+<div class="window" fxLayout="column" fxLayoutAlign="space-between center">
+  <div style="width: 100%" fxLayout="column" fxLayoutAlign="start start">
+    <h1 mat-dialog-title>{{data.header}}</h1>
+    <div mat-dialog-content [innerHTML]="data.description">
+
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="ok()">OK</button>
+  </div>
+</div>

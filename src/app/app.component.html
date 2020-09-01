@@ -1,0 +1,51 @@
+<div class="main-container" fxLayoutAlign="center center">
+  <div class="sub-container mat-elevation-z8"
+       fxLayout="column" fxLayoutAlign="center">
+    <mat-carousel timings="250ms ease-in"
+                  color="primary"
+                  maxWidth="auto"
+                  proportion="35"
+                  slides="5"
+                  [loop]="true"
+                  [hideArrows]="false"
+                  [hideIndicators]="false"
+                  [useKeyboard]="true"
+                  [useMouseWheel]="false"
+                  orientation="ltr">
+
+      <mat-carousel-slide *ngFor="let item of eventData" >
+        <div fxLayout="column" fxLayoutAlign="start start"
+             style="height: 100%; background-image: {{'url(https://zapomni.lastick.ru'+ item.events[0].poster.path+')'}}; background-size: cover">
+          <div class="step-left header text-main">{{item.events[0].name.ru}}</div>
+
+          <div class="step-left datetime">
+            {{item.events[0].NearestSchedule.begin? item.events[0].NearestSchedule.begin : ''}}
+          </div>
+
+          <div class="step-left actions">
+            <button mat-raised-button color="primary"
+                    (click)="details(item.events[0].name.ru, item.events[0].description.ru)">
+              Подробнее
+            </button>
+          </div>
+        </div>
+
+      </mat-carousel-slide>
+    </mat-carousel>
+
+  </div>
+</div>
+
+
+<!--<button mat-raised-button (click)="click()">Нажми</button>-->
+<!--<ui-carousel [infinite]="true" [fade]="false" [speed]="200" style="height: 100vh; width: 100vw; background: aliceblue">-->
+<!--  <ui-carousel-item *ngFor="let item of eventsData.events">-->
+<!--    <div fxLayout="column" fxLayoutAlign="start start">-->
+<!--      <div>{{item.name.ru}}</div>-->
+<!--      <button mat-raised-button (click)="click()">Нажми</button>-->
+<!--    </div>-->
+<!--  </ui-carousel-item>-->
+<!--</ui-carousel>-->
+
+
+
